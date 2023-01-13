@@ -60,9 +60,9 @@ class Router
         $url = $this->removeQueryStringVariables($url);
      
         if ($this->match($url)) {
-            $controller = $this->params['controller'];
+            $controller = $this->params['Controller'];
             $controller = $this->convertToStudlyCaps($controller);
-            $controller = "app\controller\\$controller";
+            $controller = "App\Controller\\$controller";
 
             if (class_exists($controller)) {
                 $controller_object = new $controller($this->params);

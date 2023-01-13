@@ -1,7 +1,7 @@
 <?php
 
 
-require_once '../twig/vendor/autoload.php';
+require_once '../vendor/autoload.php';
 
 // spl_autoload_register(function($class){
 //     $root = dirname(__DIR__);
@@ -15,9 +15,9 @@ $route = new Core\Router();
 
 // $route->add('', ['controller' => 'Home', 'action' => 'index']);
 // $route->add('posts', ['controller' => 'Posts', 'action' => 'index']);
-$route->add('', ['controller' => 'Home', 'action' => 'index']);
-$route->add('{controller}/{action}');
-$route->add('{controller}/{id:\d+}/{action}');
+$route->add('', ['Controller' => 'home', 'action' => 'index']);
+$route->add('{Controller}/{action}');
+$route->add('{Controller}/{id:\d+}/{action}');
 // $route->add('admin/{action}/{controller}');
     
 // Display the routing table

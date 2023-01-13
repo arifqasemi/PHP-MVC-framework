@@ -1,9 +1,9 @@
 <?php
-namespace app\controller;
-use \core\view;
+namespace App\Controller;
+use \Core\view;
 
 
-class Home extends \core\controller
+class Home extends \Core\Controller
 {
 
    
@@ -14,6 +14,6 @@ class Home extends \core\controller
 
 
     public function index(){
-      view::renderTemplate('home/index.html', ['name'=>'arif', 'colors'=> ['red','blue', 'black']]);
+      view::render('home/index.html', ['name'=>'arif', 'colors'=> ['red','blue', 'black']]);
     }
 }
