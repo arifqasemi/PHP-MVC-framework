@@ -28,16 +28,16 @@ class View {
    //    }
 
    //  }
-   //  public static function renderTemplate(string $template, array $args = [])
-   //  {
-   //      static $twig = null;
+    public static function renderTemplate(string $template, array $args = [])
+    {
+        static $twig = null;
  
-   //      if ($twig === null)
-   //      {
-   //          $loader = new \Twig\Loader\FilesystemLoader('../app/views');
-   //          $twig = new \Twig\Environment($loader);
-   //      }
+        if ($twig === null)
+        {
+            $loader = new \Twig\Loader\FilesystemLoader('../App/views');
+            $twig = new \Twig\Environment($loader);
+        }
  
-   //      echo $twig->render($template, $args);
-   //  }
+        echo $twig->render($template, $args);
+    }
 }

@@ -14,6 +14,6 @@ class Home extends \Core\Controller
 
 
     public function index(){
-      view::render('home/index.html', ['name'=>'arif', 'colors'=> ['red','blue', 'black']]);
+      view::renderTemplate('home/index.html', ['name'=>'arif', 'colors'=> ['red','blue', 'black']]);
     }
 }
